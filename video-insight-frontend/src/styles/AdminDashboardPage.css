@@ -1,0 +1,76 @@
+.admin-dashboard-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.admin-dashboard-container h2 {
+  text-align: center;
+  color: #283747;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.loading-message,
+.error-message,
+.no-users-message {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.loading-message {
+  color: #007bff;
+}
+
+.error-message {
+  color: #dc3545;
+}
+
+.no-users-message {
+  color: #6c757d;
+}
+
+.users-table-wrapper {
+  overflow-x: auto;
+}
+
+.users-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.5rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.users-table th,
+.users-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.users-table th {
+  background-color: #e9ecef;
+  color: #495057;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.users-table tbody tr:nth-child(even) {
+  background-color: #eef7fc;
+}
+
+.users-table tbody tr:hover {
+  background-color: #e2f0f7;
+}
+
+.users-table td {
+  font-size: 0.95rem;
+  color: #343a40;
+}

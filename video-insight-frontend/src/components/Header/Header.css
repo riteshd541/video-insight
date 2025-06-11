@@ -1,0 +1,97 @@
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #283747;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  margin-bottom: 2rem;
+}
+
+.dashboard-header .header-left h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #add8e6;
+}
+
+.dashboard-header .header-right {
+  position: relative;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+}
+
+.avatar-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  color: white;
+  font-size: 2.5rem;
+  transition: color 0.3s ease;
+}
+
+.avatar-button:hover {
+  color: #add8e6;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  min-width: 200px;
+  z-index: 1000;
+  color: #333;
+}
+
+.dropdown-menu p {
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
+}
+
+.dropdown-menu p strong {
+  color: #007bff;
+}
+
+.logout-button {
+  width: 100%;
+  padding: 0.7rem;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: #c82333;
+}
+.admin-button {
+  width: 100%;
+  padding: 0.7rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-right: 1rem;
+  transition: background-color 0.3s ease;
+}
+.user-info-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
