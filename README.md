@@ -109,6 +109,7 @@ Video details Fetched
 ![App Screenshot](Assets/Meta-fetched-content.png)
 
 Summary Shown
+
 ![App Screenshot](Assets/summery.png)
 
 ## 📦 Tech Stack
