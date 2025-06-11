@@ -9,6 +9,7 @@ export default function RegisterPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
 
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -23,14 +24,11 @@ export default function RegisterPage() {
       toast.error(validationMessage, {
         position: "top-right",
         autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
       });
       return;
     }
+
+    setIsLoading(true);
 
     try {
       await registerUser(email, password);
@@ -38,27 +36,20 @@ export default function RegisterPage() {
       toast.success("Registration successful! Please log in.", {
         position: "top-right",
         autoClose: 3000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
       });
 
       setTimeout(() => {
         navigate("/login");
       }, 3500);
     } catch (err) {
-      setError(err.response?.data?.message || "Registration failed");
-      toast.error(err.response?.data?.message || "Registration failed", {
+      const errMsg = err.response?.data?.message || "Registration failed";
+      setError(errMsg);
+      toast.error(errMsg, {
         position: "top-right",
         autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
       });
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -82,7 +73,13 @@ export default function RegisterPage() {
             required
             onChange={(e) => setPassword(e.target.value)}
           />
-          <button type="submit">Register</button>
+
+          {isLoading ? (
+            <div className="spinner"></div>
+          ) : (
+            <button type="submit">Register</button>
+          )}
+
           <div style={{ margin: "0.5rem auto" }}>
             Did you already have an account? <a href="/login">Login</a>
           </div>

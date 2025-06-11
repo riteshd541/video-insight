@@ -11,6 +11,7 @@ export default function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -23,6 +24,7 @@ export default function LoginPage() {
   const handleLogin = async (e) => {
     e.preventDefault();
     setError("");
+    setIsLoading(true);
 
     try {
       const res = await loginUser(email, password);
@@ -31,11 +33,6 @@ export default function LoginPage() {
       toast.success("Login successful! Redirected to dashboard...", {
         position: "top-right",
         autoClose: 2000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
       });
 
       setTimeout(() => {
@@ -49,12 +46,9 @@ export default function LoginPage() {
       toast.error(errorMessage, {
         position: "top-right",
         autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
       });
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -78,7 +72,13 @@ export default function LoginPage() {
             placeholder="Password"
             required
           />
-          <button type="submit">Login</button>
+
+          {isLoading ? (
+            <div className="spinner"></div>
+          ) : (
+            <button type="submit">Login</button>
+          )}
+
           <div style={{ margin: "0.5rem auto" }}>
             Don't have an account?{" "}
             <a href="/register" className="register-link">
