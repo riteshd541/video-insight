@@ -27,7 +27,7 @@ export default function VideoForm() {
     setLoadingSummarize(true);
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/youtube/summarize-basic",
+        "https://video-insight-jyba.onrender.com/api/youtube/summarize-basic",
         { url }
       );
       setSummary(res.data.summary);
@@ -44,7 +44,7 @@ export default function VideoForm() {
     setLoadingOpenAI(true);
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/youtube/summarize",
+        "https://video-insight-jyba.onrender.com/api/youtube/summarize",
         { url }
       );
       setSummary(res.data.summary);
@@ -64,7 +64,7 @@ export default function VideoForm() {
 
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/youtube/metadata",
+        "https://video-insight-jyba.onrender.com/api/youtube/metadata",
         { url }
       );
       setVideoData(res.data);
