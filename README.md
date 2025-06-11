@@ -94,10 +94,22 @@ Pass - Ritesh@123
 ![App Screenshot](Assets/login.png)
 
 📝 Register Page
+![App Screenshot](Assets/register.png)
+
+🛠 Admin Panel All user
+![App Screenshot](Assets/admin-dashboard-all-user.png)
+
+📊 Admin Dashboard
+![App Screenshot](Assets/admin-dashboard.png)
 
 📊 User Dashboard
+![App Screenshot](Assets/user-dashboard.png)
 
-🛠 Admin Panel
+Video details Fetched
+![App Screenshot](Assets/Meta-fetched-content.png)
+
+Summary Shown
+![App Screenshot](Assets/summery.png)
 
 ## 📦 Tech Stack
 
