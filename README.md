@@ -19,44 +19,56 @@ Make sure the following are installed on your machine:
 ---
 
 ## 🚀 How to Run This Project
+
 ### 1. Clone the Repository
 
 - git clone https://github.com/your-username/video-insight-summarizer.git
 - cd video-insight-summarizer
+
 ### 2. Install Dependencies
-####  Backend
+
+#### Backend
+
 - cd video-insight-backend
 - npm install
-####  Frontend
+
+#### Frontend
+
 - cd ../video-insight-frontend
 - npm install
 
 ### 3. Set Up Environment Variables in backend folder
+
 - MONGO_URI=your_mongo_uri_here
 - JWT_SECRET=your_secret-key
 - YOUTUBE_API_KEY=youtube-secret_api_key
 - OPENAI_API_KEY=openai_api_key
 
 ### 4. Start the App
+
 #### Start Backend Server
+
 - cd video-insight-backend
 - node index.js
 
 #### Start Frontend Dev Server
+
 - cd ../video-insight-frontend
 - npm start
+
 ---
 
 ## Features Implemented
+
 ✅ Firebase Authentication (Email & Password)
 
 ✅ Protected Routes
 
 ✅ Role-based Access (User/Admin)
 
-Admin credentials- 
+Admin credentials-
 
-Username - ritesh@gmail.com 
+Username - ritesh@gmail.com
 
 Pass - Ritesh@123
 
@@ -79,6 +91,7 @@ Pass - Ritesh@123
 ## 📸 Screenshots
 
 🔐 Login Page
+![App Screenshot](Assets/login.png)
 
 📝 Register Page
 
@@ -87,6 +100,7 @@ Pass - Ritesh@123
 🛠 Admin Panel
 
 ## 📦 Tech Stack
+
 **Frontend**: React.js, Axios, Js, HTML,CSS
 
 **Backend**: Node.js, Express.js, MongoDB, Mongoose
@@ -96,7 +110,9 @@ Pass - Ritesh@123
 **Deployment**: Netlify (frontend), Render (backend)
 
 ## 💡 Contributing
+
 Pull requests are welcome. For major changes, please open an issue first.
 
 ## 📄 License
+
 This project is for educational and demonstration purposes only.
